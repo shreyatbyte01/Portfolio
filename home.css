@@ -1,0 +1,39 @@
+#home.active { display: flex; flex-direction: column-reverse; align-items: center; gap: 2.5rem; margin: 1.5rem auto; }
+.img-container { width: min(270px, 70vw); aspect-ratio: 1; border-radius: 50%; position: relative; display: flex; justify-content: center; align-items: center; overflow: hidden; flex-shrink: 0; }
+.img-container::before, .img-container::after {
+  content: ""; position: absolute; inset: 0;
+  background-image: conic-gradient(transparent, transparent, transparent, transparent, var(--green));
+  animation: revolve 4s linear infinite;
+}
+.img-container::after { animation-delay: 2s; }
+@keyframes revolve { to { transform: rotate(360deg); } }
+.img-container img { width: calc(100% - 15px); height: calc(100% - 15px); border-radius: 50%; object-fit: cover; object-position: top; position: relative; z-index: 2; }
+
+.details { display: flex; flex-direction: column; gap: 1.2rem; max-width: 620px; }
+.details h2 { font-size: 3rem; line-height: 1.1; }
+.details h2 span { color: var(--green); border-bottom: 5px solid var(--green); }
+.details h3 { font-size: 1.8rem; display: flex; gap: 10px; min-height: 2.4rem; white-space: nowrap; }
+.details h3 span { color: var(--green); }
+.details h3 span::after { content: "|"; margin-left: 4px; animation: blink 0.8s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.details p { font-size: 1.2rem; color: var(--muted); }
+
+.btn { display: inline-block; text-align: center; text-decoration: none; padding: 0.8rem 2rem; font: inherit; font-size: 1.2rem; font-weight: 700; border-radius: 50px; background: var(--green); color: var(--primary); border: 2px solid var(--green); cursor: pointer; transition: background 0.25s, color 0.25s; }
+.btn:hover { background: transparent; color: var(--green); }
+
+.social-icons { display: flex; gap: 1rem; flex-wrap: wrap; }
+.social-icons a { color: var(--green); border: 2px solid var(--green); width: 46px; height: 46px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; text-decoration: none; transition: background 0.25s, color 0.25s; }
+.social-icons a:hover { background: var(--green); color: var(--primary); }
+
+@media (min-width: 768px) {
+  #home.active { display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: center; }
+  .details h2 { font-size: 4rem; }
+  .details h3 { font-size: 2.2rem; }
+  .img-container { width: 340px; }
+}
+@media (min-width: 1024px) {
+  .details h2 { font-size: 5rem; }
+  .details h3 { font-size: 2.6rem; }
+  .details p { font-size: 1.35rem; }
+  .img-container { width: 420px; }
+}

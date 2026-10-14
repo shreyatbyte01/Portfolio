@@ -1,0 +1,37 @@
+#about.active { display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 1.5rem auto; }
+.sidebar { display: flex; flex-direction: column; gap: 1.2rem; }
+.sidebar h3 { font-size: 2rem; }
+.sidebar p { font-size: 1.1rem; color: var(--muted); }
+.tabs { display: flex; flex-direction: column; gap: 0.8rem; }
+.tab { font: inherit; font-size: 1.2rem; font-weight: 700; color: var(--white); background: var(--secondary); border: 2px solid transparent; border-radius: 8px; padding: 0.9rem; cursor: pointer; transition: border-color 0.25s, color 0.25s; }
+.tab:hover, .tab.active { border-color: var(--green); color: var(--green); }
+
+.tab-content { display: none; }
+.tab-content.active { display: flex; flex-direction: column; gap: 1.5rem; }
+aside h2 { font-size: 2rem; }
+
+.card-list, .my-info { display: grid; grid-template-columns: 1fr; gap: 1.2rem; max-height: 420px; overflow-y: auto; padding-right: 0.5rem; }
+.skill-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.card-list::-webkit-scrollbar { width: 5px; }
+.card-list::-webkit-scrollbar-thumb { background: var(--green); border-radius: 10px; }
+
+.experience-box { display: flex; flex-direction: column; gap: 0.6rem; background: var(--secondary); border: 2px solid transparent; border-radius: 10px; padding: 1.2rem; transition: border-color 0.25s; }
+.experience-box:hover { border-color: var(--green); }
+.experience-box h4 { font-size: 1.2rem; color: var(--muted); font-weight: 600; }
+.experience-box h3 { font-size: 1.4rem; color: var(--green); }
+.experience-box p { color: var(--muted); }
+.company-name { display: flex; align-items: center; gap: 0.6rem; }
+.company-name span { border: 5px solid var(--green); border-radius: 50%; }
+.company-name p { color: var(--white); }
+
+.skill-box { background: var(--secondary); border: 2px solid transparent; border-radius: 10px; padding: 1.2rem 0.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.6rem; transition: border-color 0.25s; }
+.skill-box:hover { border-color: var(--green); }
+.skill-box img { width: 56px; height: 56px; object-fit: contain; }
+
+.info-box { display: grid; grid-template-columns: 8rem 1fr; gap: 1rem; padding: 0.9rem 0; border-bottom: 1px solid var(--line); font-size: 1.15rem; }
+.info-box span:first-child { color: var(--green); font-weight: 700; }
+
+@media (min-width: 768px) {
+  #about.active { grid-template-columns: 2fr 3fr; gap: 3rem; align-items: start; }
+  .skill-list { grid-template-columns: repeat(3, 1fr); }
+}
