@@ -5,7 +5,7 @@ const PORTFOLIO = {
   roles: ["Creator", "Developer", "Intern", "Mandala Artist"],
 
   social: [
-    // EDIT: your profile links
+   
     {
       icon: "ph-instagram-logo",
       label: "Instagram",
