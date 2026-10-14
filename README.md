@@ -30,6 +30,9 @@ with bright green accents and a responsive layout.
 Your folder names may differ slightly depending on your final project
 files. The website is organized around an HTML entry point, stylesheets,
 scripts, and assets.
+
+
+
 portfolio/
 ├── index.html
 ├── assets/
