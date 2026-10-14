@@ -1,7 +1,7 @@
 const PORTFOLIO = {
   name: "Shreya Tarade",
-  email: "shreyatarade4@gmail.com", // EDIT: your real email
-  cv: "", // EDIT: e.g. "assets/Shreya-CV.pdf" (button becomes "Get in touch" if empty)
+  email: "shreyatarade4@gmail.com",
+  cv: "", 
   roles: ["Creator", "Developer", "Intern", "Mandala Artist"],
 
   social: [
@@ -54,7 +54,7 @@ const PORTFOLIO = {
   ],
 
   experience: [
-    // EDIT: replace with your real roles
+   
     {
       date: "2023 - 2024",
       title: "Frontend Developer",
@@ -90,7 +90,7 @@ const PORTFOLIO = {
   ],
 
   projects: [
-    // EDIT: titles, text and links. Leave live/code empty to hide a link.
+   
     {
       img: "assets/projects/project1.webp",
       title: "Finance Landing Page",
