@@ -4,7 +4,7 @@
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
   const esc = (t) => String(t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-  /* ---------- Render content from data.js ---------- */
+ 
   const socials = D.social.map((s) =>
     `<a href="${esc(s.url)}" target="_blank" rel="noopener" aria-label="${esc(s.label)}"><i class="ph ${s.icon}"></i></a>`).join("");
   $("#social-home").innerHTML = socials;
@@ -53,7 +53,7 @@
   $("#mail-link").href = "mailto:" + D.email;
   $("#mail-text").textContent = D.email;
 
-  /* ---------- Contact form: opens the visitor's email app ---------- */
+ 
   $("#contact-form").addEventListener("submit", (e) => {
     e.preventDefault();
     const f = new FormData(e.target);
@@ -61,7 +61,7 @@
     location.href = `mailto:${D.email}?subject=${encodeURIComponent("Portfolio message from " + f.get("name"))}&body=${encodeURIComponent(body)}`;
   });
 
-  /* ---------- Page navigation (hash based, back button works) ---------- */
+  / - navigation  page - /
   const header = $("#site-header");
   const menuBtn = $("#menu-btn");
   const pages = $$(".content");
@@ -90,7 +90,7 @@
   window.addEventListener("hashchange", show);
   show();
 
-  /* ---------- About tabs ---------- */
+
   const tabs = $$(".tab");
   const panels = $$(".tab-content");
   function openTab(name) {
@@ -104,7 +104,7 @@
   tabs.forEach((t) => t.addEventListener("click", () => openTab(t.dataset.section)));
   openTab("experience");
 
-  /* ---------- Typing effect ---------- */
+
   const out = $("#typing-span");
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reduce) {
